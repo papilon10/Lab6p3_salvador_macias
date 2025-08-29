@@ -8,16 +8,15 @@ protected:
     int vida;
 public:
     Entidad(int vida = 100);
-    virtual ~Entidad();
+     ~Entidad();
     
     
     int getVida() const;
     void setVida(int vida);
     
     
-    
-    virtual int atacar(int turno) = 0;
-    virtual void recibirDanio(int cantidad);
+        virtual int atacar(int turno) = 0;
+        virtual void recibirDanio(int cantidad);
     
     bool estaVivo() const;
 };

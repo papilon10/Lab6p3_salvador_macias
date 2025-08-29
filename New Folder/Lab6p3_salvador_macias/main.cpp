@@ -11,7 +11,7 @@ using namespace std;
 vector<Recipiente> lista_recipientes;
 vector<Arana>lista_aranas;
 vector<Mantis>lista_mantis;
-
+vector<Entidad> entidades;
 
 
 void agregar_entidad(){
@@ -248,8 +248,23 @@ void eliminar_entidades(){
 }//fin eliminar entidades
 
 void desafio(){
-    
-    
+    int dificultad;
+    int rondas;
+    int tamano_vector=lista_aranas.size()+lista_mantis.size()+lista_mantis.size();
+    cout<<"--seleccionar dificultad--"<<endl;
+    cout<<"1.prueba del guerrero"<<endl;
+    cout<<"2.prueba de supervivencia"<<endl;
+    cout<<"3.prueba del campeon"<<endl;
+    cin>>dificultad;
+    if (dificultad == 1) rondas = 1;
+       else if (dificultad == 2) rondas = tamano_vector / 2;
+       else rondas = tamano_vector;
+
+       int hpJugador = 9;
+       cout << "Desafio inicia! HP Jugador: " << hpJugador << endl;
+
+    for (int r = 0; r < rondas && hpJugador > 0; r++) {
+    }
 }//fin desafio
 
 int main(int argc, const char * argv[]) {
