@@ -1,4 +1,4 @@
-
+#pragma once
 
 #include <string>
 using namespace std;
@@ -10,11 +10,12 @@ public:
     Entidad(int vida = 100);
     virtual ~Entidad();
 
- 
+   
     int getVida() const;
     void setVida(int vida);
 
-    virtual string toString() const = 0;
+
+
     virtual int atacar(int turno) = 0; 
     virtual void recibirDanio(int cantidad);
 

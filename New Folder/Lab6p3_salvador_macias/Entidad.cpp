@@ -23,3 +23,6 @@ void Entidad::recibirDanio(int cantidad) {
 bool Entidad::estaVivo() const {
     return vida > 0;
 }
+
+
+

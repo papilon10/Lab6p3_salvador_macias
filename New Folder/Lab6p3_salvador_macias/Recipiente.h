@@ -1,13 +1,21 @@
-//
-//  Recipiente.hpp
-//  Lab6p3_salvador_macias
-//
-//  Created by salvador macias on 29/08/2025.
-//
+#pragma once
 
-#ifndef Recipiente_hpp
-#define Recipiente_hpp
 
-#include <stdio.h>
+#include "Entidad.h"
 
-#endif /* Recipiente_hpp */
+enum TipoArma { Aguja, Clavo, Abismo };
+
+class Recipiente : public Entidad {
+private:
+    int poderAbismal; 
+    TipoArma arma;
+public:
+    Recipiente(int vida, int poderAbismal, TipoArma arma);
+    ~Recipiente();
+
+    int getPoderAbismal() const;
+    TipoArma getArma() const;
+
+   
+    int atacar(int turno) override;
+};

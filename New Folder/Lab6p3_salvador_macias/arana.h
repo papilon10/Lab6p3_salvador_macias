@@ -1,13 +1,18 @@
-//
-//  arana.hpp
-//  Lab6p3_salvador_macias
-//
-//  Created by salvador macias on 29/08/2025.
-//
+#pragma once
 
-#ifndef arana_hpp
-#define arana_hpp
+#include "Entidad.h"
 
-#include <stdio.h>
+class Arana : public Entidad {
+private:
+    int numeroPatas;
+    bool venenosa;
+    bool envenenado;
+public:
+    Arana(int vida, int numeroPatas, bool venenosa);
+    ~Arana();
 
-#endif /* arana_hpp */
+ 
+    int atacar(int turno) override;
+
+    void aplicarVeneno();
+};

@@ -1,13 +1,17 @@
-//
-//  mantis.hpp
-//  Lab6p3_salvador_macias
-//
-//  Created by salvador macias on 29/08/2025.
-//
+#pragma once
 
-#ifndef mantis_hpp
-#define mantis_hpp
+#include "Entidad.h"
 
-#include <stdio.h>
+class Mantis : public Entidad {
+private:
+    int precision; 
+    int filo;
+    int honor;
+public:
+    Mantis(int vida, int precision, int filo, int honor);
+    ~Mantis();
 
-#endif /* mantis_hpp */
+
+    int atacar(int turno) override;
+};
+
