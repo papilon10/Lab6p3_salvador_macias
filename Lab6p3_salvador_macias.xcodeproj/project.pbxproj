@@ -23,9 +23,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		185660CE2E62352600A677CA /* Lab6p3_salvador_macias */ = {
+		185660DE2E6237E600A677CA /* New Folder */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Lab6p3_salvador_macias;
+			path = "New Folder";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,7 +44,7 @@
 		185660C32E62352600A677CA = {
 			isa = PBXGroup;
 			children = (
-				185660CE2E62352600A677CA /* Lab6p3_salvador_macias */,
+				185660DE2E6237E600A677CA /* New Folder */,
 				185660CD2E62352600A677CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				185660CE2E62352600A677CA /* Lab6p3_salvador_macias */,
+				185660DE2E6237E600A677CA /* New Folder */,
 			);
 			name = Lab6p3_salvador_macias;
 			packageProductDependencies = (
