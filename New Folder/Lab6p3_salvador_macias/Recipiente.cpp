@@ -3,7 +3,7 @@
 #include <cmath>
 
 Recipiente::Recipiente(int vida, int poderAbismal, TipoArma arma)
-    : Entidad(vida), poderAbismal(poderAbismal), arma(arma) {}
+: Entidad(vida), poderAbismal(poderAbismal), arma(arma) {}
 
 Recipiente::~Recipiente() {}
 

@@ -10,11 +10,11 @@ private:
 public:
     Arana(int vida, int numeroPatas, bool venenosa);
     ~Arana();
-
- 
+    
+    
     int atacar(int turno) override;
     int getNumeroPatas() const;
     bool getVenenosa() const;
-
+    
     void aplicarVeneno();
 };

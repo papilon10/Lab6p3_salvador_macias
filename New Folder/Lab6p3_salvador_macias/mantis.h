@@ -10,11 +10,11 @@ private:
 public:
     Mantis(int vida, int precision, int filo, int honor);
     ~Mantis();
-
+    
     int getPrecision() const;
     int getFilo() const;
     int getHonor() const;
-
+    
     
     int atacar(int turno) override;
 };

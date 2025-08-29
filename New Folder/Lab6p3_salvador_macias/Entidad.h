@@ -9,16 +9,16 @@ protected:
 public:
     Entidad(int vida = 100);
     virtual ~Entidad();
-
-   
+    
+    
     int getVida() const;
     void setVida(int vida);
-
-
-
-    virtual int atacar(int turno) = 0; 
+    
+    
+    
+    virtual int atacar(int turno) = 0;
     virtual void recibirDanio(int cantidad);
-
+    
     bool estaVivo() const;
 };
 
