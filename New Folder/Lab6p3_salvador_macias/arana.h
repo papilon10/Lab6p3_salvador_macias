@@ -13,6 +13,8 @@ public:
 
  
     int atacar(int turno) override;
+    int getNumeroPatas() const;
+    bool getVenenosa() const;
 
     void aplicarVeneno();
 };

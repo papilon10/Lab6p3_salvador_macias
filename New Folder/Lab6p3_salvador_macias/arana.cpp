@@ -23,3 +23,8 @@ int Arana::atacar(int turno) {
 void Arana::aplicarVeneno() {
     envenenado = true;
 }
+
+int Arana::getNumeroPatas() const { return numeroPatas; }
+bool Arana::getVenenosa() const { return venenosa; }
+
+

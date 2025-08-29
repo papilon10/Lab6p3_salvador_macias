@@ -37,9 +37,21 @@ void agregar_entidad(){
                     cin>>poder_abismal;
                     cout<<"ingrese el tipo de arma: (0=Aguja, 1=Clavo, 2=Abismo) ";
                     cin>>tipo_arma;
+                    if (vida<3000
+                        ) {
+                        if (poder_abismal>=1&&poder_abismal<4) {
+                            if (tipo_arma>=0&&tipo_arma<3) {
+                                lista_recipientes.push_back(Recipiente(vida, poder_abismal, TipoArma(tipo_arma)));
+                                cout<<" se ha creado un recipiente "<<endl<<endl;
+                            }
+                        }
+                        
+                    }else{
+                        cout<<"se ingreso un valor invalido"<<endl;
+                    }
                     
-                    lista_recipientes.push_back(Recipiente(vida, poder_abismal, TipoArma(tipo_arma)));
-                    cout<<" se ha creado un recipiente "<<endl;
+                    /*lista_recipientes.push_back(Recipiente(vida, poder_abismal, TipoArma(tipo_arma)));
+                    cout<<" se ha creado un recipiente "<<endl<<endl;*/
                     
                     
                 }
@@ -53,8 +65,8 @@ void agregar_entidad(){
                     cout<<"ingrese la vida: "<<endl;
                     cin>>vida;
                     cout<<"ingrese el numero de patas: "<<endl;
-                    cin>>vida;
-                    cout<<"ingrese si es venenosa [0.(si)\1.(no)]"<<endl;
+                    cin>>numero_patas;
+                    cout<<"ingrese si es venenosa [0.(si)/1.(no)]"<<endl;
                     cin>>opc_bool;
                     if (opc_bool==0) {
                         esVenenosa=true;
@@ -64,7 +76,14 @@ void agregar_entidad(){
                         cout<<"opcion ingresada es invalida"<<endl;
                         
                     }
-                    cout<<"se ha creado una arana"<<endl;
+                    if (vida<3000) {
+                        lista_aranas.push_back(Arana( vida, numero_patas, esVenenosa));
+                        cout<<"se ha creado una arana"<<endl<<endl;
+                    }else{
+                        cout<<"se ingreso un valor invalido"<<endl;
+                    }
+                    
+                    
                 }
                 break;
             case 3:
@@ -82,10 +101,20 @@ void agregar_entidad(){
                 cout<<"ingrese el honor: "<<endl;
                 cin>> honor;
                 
-                cout<<"se ha creado una mantis "<<endl;
-
-                
-                
+                if (vida<3000) {
+                    if (precision>=1&&precision<4) {
+                        if (filo>=1&&filo<9) {
+                            if (honor>=1&&honor<4) {
+                                lista_mantis.push_back(Mantis(vida, precision, filo, honor));
+                                cout<<"se ha creado una mantis "<<endl<<endl;
+                                
+                            }
+                        }
+                    }
+                }else{
+                    cout<<"se ingreso un valor invalido"<<endl;
+                }
+                          
             }
             break;
             case 4:
@@ -105,12 +134,28 @@ void agregar_entidad(){
 }//fin agregar entidad
 
 void listar_entidades(){
-    cout<<"lista de entidades "<<endl;
+    cout<<"--lista de recipientes--"<<endl;
     for (int i=0; i<lista_recipientes.size(); i++) {
         
-        cout<<i<<")"<<"vida de la entidad:  "<<lista_recipientes[i].getVida()<<endl
+        cout<<i<<")"<<"vida del recipient:  "<<lista_recipientes[i].getVida()<<endl
         <<"poder abismal:  "<<lista_recipientes[i].getPoderAbismal()<<endl
-        <<"tipo de arma:  "<<lista_recipientes[i].getArma()<<endl;
+        <<"tipo de arma:  "<<lista_recipientes[i].getArma()<<endl<<endl;
+    }
+    
+    cout<<"--lista de aranas--"<<endl;
+    for (int i=0; i<lista_aranas.size(); i++) {
+        
+        cout<<i<<")"<<"vida de la arana:  "<<lista_aranas[i].getVida()<<endl
+        <<"numero de patas:  "<<lista_aranas[i].getNumeroPatas()<<endl
+        <<"es venenosa?:  "<<lista_aranas[i].getVenenosa()<<endl<<endl;
+    }
+    
+    cout<<"--lista de mantis--"<<endl;
+    for (int i=0; i<lista_mantis.size(); i++) {
+        cout<<i<<")"<<"vida de la mantis: "<<lista_mantis[i].getVida()<<endl
+        <<"precision de la mantis: "<<lista_mantis[i].getPrecision()<<endl
+        <<"filo de la mantis: "<<lista_mantis[i].getFilo()<<endl
+        <<"honor de la mantis: "<<lista_mantis[i].getHonor()<<endl<<endl;
     }
     
 }//fin listar entidades

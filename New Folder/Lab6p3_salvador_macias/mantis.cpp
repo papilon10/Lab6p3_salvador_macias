@@ -18,3 +18,9 @@ int Mantis::atacar(int turno) {
     if (vida < (3000 * 0.4)) danio *= honor;
     return danio;
 }
+
+
+int Mantis::getFilo() const { return filo; }
+int Mantis::getPrecision() const { return precision; }
+int Mantis::getHonor() const { return honor; }
+
